@@ -1,0 +1,6 @@
+#Create new cluster
+kops create cluster --name=k8s.cloudtechlearn.com --state=s3://kops-state-ryadav --zones=us-east-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=k8s.cloudtechlearn.com
+#Commit chnages and create cluster in aws
+kops update cluster k8s.cloudtechlearn.com --yes
+#Delete cluster
+kops delete cluster k8s.cloudtechlearn.com --yes

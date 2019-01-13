@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-py
+  labels:
+    app: hello-world-py
+spec:
+  containers:
+    - name: hello-world-py
+      image: ry2339646/hello-world-py
+      imagePullPolicy: IfNotPresent
+      ports:
+      - containerPort: 80
+  restartPolicy: Always
+
